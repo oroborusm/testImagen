@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @proyecto.titulo %>
+</p>
+
+<p>
+  <strong>Contenido:</strong>
+  <%= @proyecto.contenido %>
+</p>
+
+<p>
+	<strong>Foto:</strong>
+	<% @proyecto.images.each do |imagen| %>
+		<%= @proyecto.images(imagen) %>
+	<% end %>
+</p>
+
+<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
+<%= link_to 'Back', proyectos_path %>
